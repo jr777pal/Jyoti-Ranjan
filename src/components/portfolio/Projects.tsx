@@ -7,15 +7,15 @@ export const Projects = () => {
       title: 'Teachers on Duty',
       description: 'A online learning platform. Teachers can create and manage courses, upload resources, and track student progress. Students can enroll in courses, access materials, and participate in discussions.',
       tech: ['HTML', 'CSS', 'Javascript', 'MySQL','PHP'],
-      github: 'https://github.com',
-      live: 'https://example.com',
+      github: 'https://github.com/jr777pal/Teacher-s-On-Duty.git',
+      live: 'https://teachersonduty.netlify.app/',
       color: 'from-neon-blue to-neon-purple'
     },
     {
       title: 'Quick Foodz',
       description: 'A front-end Webpage for a restaurant offering customers a seamless way to browse dishes, check prices, view images, and place orders directly via Swiggy, Zomato, WhatsApp.',
       tech: ['HTML', 'CSS', 'JavaScript'],
-      github: 'https://github.com',
+      github: 'https://github.com/jr777pal/Quick-Foodz.git',
       live: 'https://quickfoodz.netlify.app/',
       color: 'from-neon-purple to-neon-pink'
     },
@@ -26,8 +26,8 @@ export const Projects = () => {
       title: 'ASUS Service Center',
       description: 'Discover reliable support at the official ASUS Service Center. Get assistance for repairs, warranties, and product diagnostics with expert guidance.',
       tech: ['React', 'Vite', 'Node.js', 'TypeScript', 'Tailwind CSS','MySQL'],
-      github: 'https://github.com',
-      live: 'https://example.com',
+      github: 'https://github.com/jr777pal/ASUS.git',
+      live: 'https://asusservice.netlify.app/',
       color: 'from-neon-pink to-neon-blue'
     },
       //F U T U R E---U S E

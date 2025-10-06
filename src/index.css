@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cyberpunk Portfolio Theme */
+    --background: 230 25% 5%;
+    --foreground: 200 50% 95%;
+
+    --card: 230 20% 8%;
+    --card-foreground: 200 50% 95%;
+
+    --popover: 230 20% 8%;
+    --popover-foreground: 200 50% 95%;
+
+    --primary: 195 100% 50%;
+    --primary-foreground: 230 25% 5%;
+
+    --secondary: 280 100% 60%;
+    --secondary-foreground: 200 50% 95%;
+
+    --muted: 230 20% 12%;
+    --muted-foreground: 200 20% 60%;
+
+    --accent: 320 100% 50%;
+    --accent-foreground: 200 50% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 230 20% 15%;
+    --input: 230 20% 12%;
+    --ring: 195 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom 3D Portfolio Variables */
+    --neon-blue: 195 100% 50%;
+    --neon-purple: 280 100% 60%;
+    --neon-pink: 320 100% 50%;
+    --cyber-dark: 230 25% 5%;
+    --cyber-surface: 230 20% 8%;
+    --cyber-border: 230 20% 15%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-purple)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-pink)));
+    --gradient-cyber: linear-gradient(180deg, hsl(var(--cyber-dark)), hsl(var(--cyber-surface)));
+    
+    /* Glows */
+    --glow-blue: 0 0 20px hsl(var(--neon-blue) / 0.5);
+    --glow-purple: 0 0 20px hsl(var(--neon-purple) / 0.5);
+    --glow-pink: 0 0 20px hsl(var(--neon-pink) / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Already dark theme optimized */
+    --background: 230 25% 5%;
+    --foreground: 200 50% 95%;
+    
+    /* Keep existing sidebar variables for consistency */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--cyber-dark));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--neon-blue));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--neon-purple));
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-blue {
+    box-shadow: var(--glow-blue);
+  }
+
+  .glow-purple {
+    box-shadow: var(--glow-purple);
+  }
+
+  .glow-pink {
+    box-shadow: var(--glow-pink);
+  }
+
+  .glass {
+    backdrop-filter: blur(10px);
+    background: hsl(var(--cyber-surface) / 0.8);
+    border: 1px solid hsl(var(--cyber-border));
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
